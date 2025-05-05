@@ -42,28 +42,26 @@ function addGamesToPage(games) {
                 <img class="game-img" src="${game.img}"></img>
                 <p>${game.name}</p>
                 <p>Donators pledged $${game.pledged.toLocaleString('en-US')}</p>
+                <p>The goal amount was $${game.goal.toLocaleString('en-US')}</p>
             </div>
         `;
 
+        // set the inner HTML using a template literal to display some info 
+        // about each game
         gameCard.innerHTML = display;
 
         const gamesContainer = document.getElementById("games-container");
-        gamesContainer.append(gameCard);
-        // set the inner HTML using a template literal to display some info 
-        // about each game
-        // TIP: if your images are not displaying, make sure there is space
-        // between the end of the src attribute and the end of the tag ("/>")
-
 
         // append the game to the games-container
+        gamesContainer.append(gameCard);
 
         console.log("addGamesToPage function finished");
     }
 }
 
+// call the function we just defined using the correct variable
 addGamesToPage(GAMES_JSON);
 
-// call the function we just defined using the correct variable
 // later, we'll call this function using a different list of games
 
 
