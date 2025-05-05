@@ -20,8 +20,9 @@ The following **optional** features are implemented:
 * [X] List anything else that you can get done to improve the app functionality!
 * Adding button clicking animation and cursor: pointer to the buttons
 * Included more game details in the cards so viewers know the exact difference in pledged vs goal.
-* 
-NOT IMPLEMENTED YET BUT IDEAS:
+
+NOT implemented yet but ideas in mind:
+
 * Reviewer entries
 * Clicking on each game can open it and show additional details
 * Parallaxed background
