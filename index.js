@@ -196,20 +196,33 @@ const sortedGames =  GAMES_JSON.sort( (item1, item2) => {
 
 
 // use destructuring and the spread operator to grab the first and second games
-let topPledgedGameName = sortedGames[0].name;
-let topPledgedGameFunded = sortedGames[0].pledged;
+// tpg = Top Pledged Game
+let tpgName = sortedGames[0].name;
+let tpgFunds = sortedGames[0].pledged;
 
 // create a new element to hold the name of the top pledge game, then append it to the correct element
 let topPledgedGame = document.createElement("div");
 topPledgedGame.innerHTML = `
     <h3>
+        ${tpgName}
     </h3>
-    // WORKING HERE TONIGHT
     <p>
+        $${tpgFunds.toLocaleString()}
     </p>
 `;
+firstGameContainer.append(topPledgedGame);
 
 // do the same for the runner up item
-let secPledgedGame = sortedGames[1].name 
+let spgName = sortedGames[1].name;
+let spgFunds = sortedGames[1].pledged;
 
-
+let secondPledgedGame = document.createElement("div");
+secondPledgedGame.innerHTML = `
+    <h3>
+        ${spgName}
+    </h3>
+    <p>
+        $${spgFunds.toLocaleString()} 
+    </p>
+`;
+secondGameContainer.append(secondPledgedGame);
